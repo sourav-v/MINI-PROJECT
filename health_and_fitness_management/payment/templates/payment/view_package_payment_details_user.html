@@ -1,0 +1,28 @@
+        
+        {% extends 'temp/package.html' %}
+        {% block base %}
+        <h1><center>VIEW PAYMENT DETAILS ADMIN</DETAILS><center></h1>
+        <table align="center" border="1">
+            <tr>
+                <th>user_name</th>
+                {% comment %} <th>product_name</th> {% endcomment %}
+                {% comment %} <th>package_name</th> {% endcomment %}
+                <th>amount</th>
+                <th>date</th>
+                
+                
+            </tr>
+            {% for i in ok %}
+            <tr>
+                <td>{{i.uid}}</td>
+                {% comment %} <td>{{i.product.product_name}}</td> {% endcomment %}
+                {% comment %} <td>{{i.package.package_name}}</td> {% endcomment %}
+                <td>{{i.amount}}</td>
+                <td>{{i.date}}</td>
+                
+                {% comment %} <td><a href="">pending</a></td> {% endcomment %}
+                {% comment %} <td><a href="">payed</a></td> {% endcomment %}
+            </tr>
+            {%  endfor %}
+        </table>
+    {%endblock%}

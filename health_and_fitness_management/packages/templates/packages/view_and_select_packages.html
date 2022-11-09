@@ -1,0 +1,34 @@
+
+        {% extends 'temp/payment.html' %}
+        {% block base %}
+        <h1><center>VIEW AND SELECT PACKAGES<center></h1>
+        <table align="center" border="1">
+
+            
+            <table align="center" border="1">
+                <div class="tab-content">
+                    <div id="class-all" class="container tab-pane p-0 active">
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-lg m-0">
+                                <thead class="bg-secondary text-white text-center">
+            <tr>
+                <td>package name</td>
+                <td>Amount</td>
+                <td>Duration</td>
+                
+            
+                
+            </tr>
+            {% for i in ok %}
+            
+            <tr>
+                <td style="background-color:white"><font color="black">{{i.package_name}}</font></td>
+                <td style="background-color:white"><font color="black">{{i.amount}}<Font></td>
+                <td style="background-color:white"><font color="black">{{i.duration}}</font></td>
+                <td><a href="/packages/selpack/{{ i.pid }}">APPLY</a></td>
+            </tr>
+            {% endfor %} 
+        </table>
+
+        {% endblock %}
+        

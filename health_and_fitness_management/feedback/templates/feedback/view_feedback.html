@@ -1,0 +1,36 @@
+
+        {% extends 'temp/package.html' %}
+        {% block base %}
+        <table align="center" border="1">
+
+
+            <table align="center" border="1">
+                <div class="tab-content">
+                    <div id="class-all" class="container tab-pane p-0 active">
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-lg m-0">
+                                <thead class="bg-secondary text-white text-center">
+
+            <tr>
+                <td>uid</td>
+                <td>fid</td>
+                <td>feedback</td>
+                <td>date</td>
+             
+                
+            </tr>
+            {% for i in ok %}
+            <tr>
+            <td style="background-color:white"><font color="black">{{i.fid}}</td></font>
+            <td style="background-color:white"><font color="black">{{i.uid}}</td></font>
+            <td style="background-color:white"><font color="black">{{i.feedback}}</td><font>
+            <td style="background-color:white"><font color="black" >{{i.date}}</td></font>
+        
+    
+                {% comment %} <td><a href="{% url 'reply' idd=i.fid %}">reply</a></td> {% endcomment %}
+                <td><a href="/feedback/rep/{{ i.fid }}">reply</a></td>
+            </tr>
+            {%  endfor %}
+        </table>
+        {% endblock %}
+        

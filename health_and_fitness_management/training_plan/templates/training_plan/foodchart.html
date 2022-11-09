@@ -1,0 +1,28 @@
+
+      {% extends 'temp/payment.html' %}
+      {% block base %}
+        <h1><center><center></h1>
+        <table align="center" border="1">
+            <div class="tab-content">
+                <div id="class-all" class="container tab-pane p-0 active">
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-lg m-0">
+                            <thead class="bg-secondary text-white text-center">
+            <tr>
+                {% comment %} <td>package_name</td> {% endcomment %}
+                {% comment %} <td>foodchart</td> {% endcomment %}
+                {% comment %} <td>exercise</td> {% endcomment %}
+                <td>EXERCISE PATTERNS</td>
+                
+                
+            </tr>
+            {% for i in ok %}
+            <tr>
+                {% comment %} <td style="background-color:white"><font color="black">{{i.package_name}}</font></td> {% endcomment %}
+                {% comment %} <td style="background-color:white"><font color="black">{{i.foodchart}}</font></td> {% endcomment %}
+                {% comment %} <td style="background-color:white"><font color="black">{{i.exercise}}</font></td> {% endcomment %}
+                <td style="background-color:white"><font color="black">{{i.exercise_pattern_description}}</font></td>
+            </tr>
+            {%  endfor %}
+        </table>
+       {%endblock%}

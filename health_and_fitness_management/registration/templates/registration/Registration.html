@@ -1,0 +1,462 @@
+
+      {% extends 'temp/main.html' %}
+      {% block base %}
+
+      <!DOCTYPE html>
+      <html lang="en">
+      <head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+          <meta name="description" content="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                          incididunt ut labore"/>
+      
+          <title>REGISTRATION FORM</title>
+          <link rel="stylesheet" type="text/css" href="assets/resources/css/style.css"/>
+          <link href="https://fonts.googleapis.com/css?family=Lato:100,300,300i,400,700" rel="stylesheet"/>
+          <link rel="stylesheet" type="text/css" href="assets/vendors/css/lightbox.css"/>
+          <link rel="stylesheet" href="assets/vendors/css/bootstrap.css"/>
+          <link rel="stylesheet" type="text/css" href="assets/resources/css/quires.css">
+          <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+                integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+          <link href="https://unpkg.com/ionicons@4.1.2/dist/css/ionicons.min.css" rel="stylesheet">
+          <link rel="stylesheet" type="text/css" href="assets/vendors/css/animate.css"/>
+      
+      </head>
+      <body>
+      <FORM method="POST">
+        {% csrf_token %}
+      
+      <header class="section-header-reg-form">
+          <nav class="navbar navbar-expand-lg navbar-dark fixed-top main-navi">
+              <a class="navbar-brand" href="#"><span class="nav-brand-custom">BEAST  CLUB</span></a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+              </button>
+      
+              {% comment %} <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav ml-auto">
+                      <li class="nav-item">
+                          <a class="nav-link" href="index.html"><span>Home</span></a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="about.html"><span>About us</span></a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="classes.html"><span>classes</span></a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="trainers.html"><span>trainers</span></a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="membership.html"><span>membership</span></a>
+                      </li>
+      
+                      <li class="nav-item">
+                          <a class="nav-link" href="schedule.html"><span>SCHEDULE</span></a>
+                      </li>
+      
+                      <li class="nav-item">
+                          <a class="nav-link" href="gallery.html"><span>gallery</span></a>
+                      </li>
+                      <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                             data-toggle="dropdown">
+                              <span>news</span>
+                          </a>
+                          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink"
+                               style="background-color: rgba(5, 0, 0, 0.77);">
+                              <a class="nav-link" href="news.html"><span>news</span></a>
+                              <a class="nav-link" href="news-grid.html"><span>news grid</span></a>
+                              <a class="nav-link" href="news-details.html"><span>News Details</span></a>
+                          </div> {% endcomment %}
+                      {% comment %} </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="shop.html"><span>shop</span></a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="contact.html"><span>contact</span></a>
+                      </li>
+                  </ul>
+              </div> {% endcomment %}
+          </nav>
+      
+      </header>
+      
+      
+      <section class="section-reg-form">
+          <div class="container">
+              <div class="row">
+                  <div class="col-sm-12">
+                      <h2 class="heading-h2">JOIN OUR FAMILY - Apply today </h2>
+                  </div>
+                  <div class="col-sm-9 mx-auto">
+                      <div class="card">
+                          <div class="card-body form-box">
+                              <form action="error.html" method="get">
+                                  <div class="form-group">
+                                      <label for="firstName" class="col-form-label-sm">user Name</label>
+                                      <input type="text" class="form-control form-control-sm" id="uname" name="uname"
+                                             placeholder="Enter First Name">
+                                  </div>
+                                  {% comment %} <div class="form-group">
+                                      <label for="lastName" class="col-form-label-sm">Last Name</label>
+                                      <input type="text" class="form-control form-control-sm" id="lastName"
+                                             placeholder="Enter Last Name" name="last_name">
+                                  </div> {% endcomment %}
+                                  <div class="form-group">
+                                      <label class="col-form-label-sm">Gender</label>
+                                      <select name="gender" class="form-control form-control-sm">
+                                          <option value="">i am...</option>
+                                          <option value="male">Male</option>
+                                          <option value="female">Female</option>
+                                          <option value="female">others</option>
+
+                                      </select>
+                                  </div>
+
+                                  <div class="form-group">
+                                    <label for="exampleInputEmail1" class="col-form-label-sm">dob</label>
+                                    <input type="date" class="form-control form-control-sm" name="dob" id="enter a password" aria-describedby="emailHelp" placeholder="select date of birth">
+                                    
+                                 </div>
+                                  <div class="form-group">
+                                      <label for="currentWeight" class="col-form-label-sm">weight (lbs)</label>
+                                      <input type="number" class="form-control form-control-sm" id="currentWeight"
+                                             placeholder="Your current weight" name="current_weight">
+                                  </div>
+                                  {% comment %} <div class="form-group">
+                                      <label for="desiredWeight" class="col-form-label-sm">Desired weight (lbs)</label>
+                                      <input type="number" class="form-control form-control-sm" id="desiredWeight"
+                                             placeholder="Your desired weight" name="desired_weight">
+                                  </div> {% endcomment %}
+      
+                                  <div class="form-group">
+                                      <label for="height" class="col-form-label-sm">Height</label>
+                                      <input type="text" class="form-control form-control-sm" id="height"
+                                             placeholder="Height" name="height">
+                                  </div>
+                                  {% comment %} <div class="form-group">
+                                      <label for="bmi" class="col-form-label-sm">BMI</label>
+                                      <input type="text" class="form-control form-control-sm" id="bmi"
+                                             placeholder="BMI" name="bmi">
+                                  </div> {% endcomment %}
+      
+                                  <div class="form-group">
+                                      <label for="homeAddress" class="col-form-label-sm">Address</label>
+                                      <input type="text" class="form-control form-control-sm" id="Address"
+                                             placeholder="Street Address" name="home_address">
+                                  </div>
+                                  {% comment %} <div class="form-group">
+                                      <label for="city" class="col-form-label-sm">City</label>
+                                      <input type="text" class="form-control form-control-sm" id="city"
+                                             placeholder="City" name="city">
+                                  </div> {% endcomment %}
+                                  {% comment %} <div class="form-group">
+                                      <label class="col-form-label-sm">State</label>
+                                      <select name="state" class="form-control form-control-sm">
+                                          <option value="AL">Alabama</option>
+                                          <option value="AK">Alaska</option>
+                                          <option value="AZ">Arizona</option>
+                                          <option value="AR">Arkansas</option>
+                                          <option value="CA">California</option>
+                                          <option value="CO">Colorado</option>
+                                          <option value="WA">Washington</option>
+                                          <option value="WV">West Virginia</option>
+                                          <option value="WI">Wisconsin</option>
+                                          <option value="WY">Wyoming</option>
+                                      </select>
+                                  </div> {% endcomment %}
+                                  {% comment %} <div class="form-group">
+                                      <label for="code" class="col-form-label-sm">password</label>
+                                      <input type="number" class="form-control form-control-sm" id="code"
+                                             placeholder="Zip Code/Postal" name="code"> {% endcomment %}
+                                  {% comment %} </div> {% endcomment %}
+                                  {% comment %} <div class="form-group">
+                                      <label class="col-form-label-sm">Country</label>
+                                      <select name="country" class="form-control form-control-sm">
+                                          <option value="AF">Afghanistan</option>
+                                          <option value="AX">Åland Islands</option>
+                                          <option value="AL">Albania</option>
+                                          <option value="DZ">Algeria</option>
+                                          <option value="AS">American Samoa</option>
+                                          <option value="AD">Andorra</option>
+                                          <option value="AO">Angola</option>
+                                          <option value="AI">Anguilla</option>
+                                          <option value="AQ">Antarctica</option>
+                                      </select>
+                                  </div> {% endcomment %}
+                                   <div class="form-group">
+                                      <label for="exampleInputEmail1" class="col-form-label-sm">Email address</label>
+                                      <input type="email" class="form-control form-control-sm" name="email" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                                      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                                   </div>
+                                   <div class="form-group">
+                                      <label for="phone" class="col-form-label-sm">Phone</label>
+                                      <input type="number" class="form-control form-control-sm" id="phone" placeholder="Phoneno" name="phone">
+                                   </div>
+                                   <div class="form-group">
+                                      <label class="col-form-label-sm">Please select your plan</label>
+                                      <select name="plan" class="form-control form-control-sm">
+                                          <option value="DM">Diamond Membership</option>
+                                          <option value="GM">Gold Membership</option>
+                                          <option value="AL">Silver Membership</option>
+                                          <option value="OM">Other Membership Plan</option>
+                                      </select>
+                                   </div>
+
+                                   <div class="form-group">
+                                    <label for="exampleInputEmail1" class="col-form-label-sm">password</label>
+                                    <input type="password" class="form-control form-control-sm" name="pass" id="enter a password" aria-describedby="emailHelp" placeholder="Enter a password">
+                                    
+                                 </div>
+
+                                 <div class="form-group">
+                                    <label for="exampleInputEmail1" class="col-form-label-sm">confirm password</label>
+                                    <input type="password" class="form-control form-control-sm" name="pass" id="enter a password" aria-describedby="emailHelp" placeholder="Enter a password">
+                                    
+                                 </div>
+                                  <div class="form-group form-check">
+                                      <input type="checkbox" class="form-check-input" id="exampleCheck1"  name="agree" value="agree">
+                                      <label class="form-check-label check-lbl" for="exampleCheck1">I agree all terms &
+                                          conditions</label>
+                                  </div>
+
+                            
+                        
+                                </div>
+                                <div class="form-group">
+                                    <button type="submit" class="btn btn-block custom-submit-btn" name="btn" value="submit">
+                                        <span>JOIN NOW</span>
+                                    </button>
+                                </div> 
+                               
+                              </form>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </section>
+      
+      {% comment %} <footer class="section-footer">
+          <div class="container">
+              <div class="row">
+                  <div class="col-xl-3 col-lg-3 col-md-3">
+                      <h6 class="heading-h6-footer">COME FIND US</h6>
+                      <ul class="footer-ul">
+                          <li>
+                              <i class="icon ion-ios-search icon-small"></i><span>87,Roman Rd LEIGHTERTON GL8 7ZR</span>
+                          </li>
+      
+                          <li>
+                              <i class="icon ion-ios-phone-portrait icon-small"></i><span>079 8275 2085</span>
+                          </li>
+      
+                          <li>
+                              <i class="icon ion-ios-mail icon-small"></i><span>xyz@gym.com</span>
+                          </li>
+      
+      
+                          <li>
+                              <i class="icon ion-ios-globe icon-small"></i><span>xyz.com</span>
+                          </li>
+                      </ul>
+                  </div> {% endcomment %}
+{% comment %}       
+                  <div class="col-xl-3 col-lg-3 col-md-3">
+                      <h6 class="heading-h6-footer">HOT NEWS</h6>
+      
+                      <div class="row">
+                          <div class="col-sm-2 col-2 hot-news-icon-div">
+                              <i class="icon ion-ios-bonfire icon-small"></i>
+                          </div>
+      
+                          <div class="col-sm-10 col-10 hot-news-title-div">
+                              <a href="#">It is a long established fact that a reader</a>
+                          </div>
+      
+                          <div class="col-sm-2 col-2 hot-news-icon-div">
+                              <i class="icon ion-ios-bonfire icon-small"></i>
+                          </div>
+      
+                          <div class="col-sm-10 col-10 hot-news-title-div">
+                              <a href="#">It is a long established fact that a reader</a>
+                          </div>
+      
+                          <div class="col-sm-2 col-2 hot-news-icon-div">
+                              <i class="icon ion-ios-bonfire icon-small"></i>
+                          </div>
+      
+                          <div class="col-sm-10 col-10 hot-news-title-div">
+                              <a href="#">It is a long established fact that a reader</a>
+                          </div>
+                      </div>
+                  </div> {% endcomment %}
+      
+                  {% comment %} <div class="col-xl-3 col-lg-3 col-md-3">
+                      <h6 class="heading-h6-footer">OPENING TIMES</h6>
+                      <ul class="footer-ul-time-sch">
+                          <li class="clearfix">
+                              <span>Saturday</span>
+                              <span>07:00 - 19:00</span>
+                          </li>
+                          <li class="clearfix">
+                              <span>Sunday</span>
+                              <span>07:00 - 19:00</span>
+                          </li>
+                          <li class="clearfix">
+                              <span>Monday</span>
+                              <span>07:00 - 19:00</span>
+                          </li>
+                          <li class="clearfix">
+                              <span>Tuesday</span>
+                              <span>07:00 - 19:00</span>
+                          </li>
+                          <li class="clearfix">
+                              <span>Wednesday</span>
+                              <span>07:00 - 19:00</span>
+                          </li>
+                          <li class="clearfix">
+                              <span>Thursday</span>
+                              <span>07:00 - 19:00</span>
+                          </li>
+                          <li class="clearfix">
+                              <span>Friday</span>
+                              <span>07:00 - 19:00</span>
+                          </li>
+                      </ul>
+                  </div>
+      
+                  <div class="col-xl-3 col-lg-3 col-md-3">
+                      <h6 class="heading-h6-footer">Newsletter</h6>
+                      <div class="row">
+                          <div class="col-sm-12">
+                              <span class="newsletter-text">Necessitatibus porro distinctio, ex sapiente incidunt nesciunt.</span>
+                              <form action="error.html" method="post">
+                                  <div class="row">
+                                      <div class="col-sm-10 col-10 newsletter-email">
+                                          <input type="email" name="email" placeholder="Enter a valid email"
+                                                 class="form-control"/>
+                                      </div>
+                                      <div class="col-sm-2 col-2">
+                                          <button class="btn btn-footer-mail" type="submit">
+                                              <i class="icon ion-ios-send"></i>
+                                          </button>
+                                      </div>
+                                  </div>
+                              </form>
+                          </div>
+       {% endcomment %}
+                          {% comment %} <div class="col-sm-12">
+                              <h6 class="heading-h6-footer mt-3">Our Social Links</h6>
+                              <ul class="footer-ul-social">
+                                  <li>
+                                      <a href="#"><i class="icon ion-logo-facebook"></i></a>
+                                      <a href="#"><i class="icon ion-logo-twitter"></i></a>
+                                      <a href="#"><i class="icon ion-logo-googleplus"></i></a>
+                                      <a href="#"><i class="icon ion-logo-instagram"></i></a>
+                                  </li>
+                              </ul>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-sm-12">
+                      <p class="copyright">Copyright &copy; 2018 by BEAST CLUB. All rights reserved.</p>
+                  </div>
+              </div>
+          </div> {% endcomment %}
+      </footer>
+      
+      
+      <script src="assets/vendors/js/jquery-3.3.1.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+              integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+              crossorigin="anonymous"></script>
+      <script src="assets/vendors/js/bootstrap.js"></script>
+      <script src="assets/vendors/js/lightbox.js"></script>
+      <script src="assets/vendors/js/jquery.waypoints.min.js"></script>
+      <script src="assets/resources/js/script.js"></script>
+      {% if msg != "" %}
+      <script>
+        alert("successfully registered")
+      </script>
+      {% endif %}
+      </body>
+      </html>
+
+
+
+
+
+
+
+        {% comment %} <h2 align="center">REGISTRATION</h2>
+        <form method="post">
+            {% csrf_token %}
+        <table align="center">
+            <tr>
+            <td>USER NAME</td>
+            <td><input type ="text" name="uname"</td>
+            </tr>
+
+            <tr>
+            <td>EMAIL</td>
+            <td><input type="text" name="email"</td>
+            </tr>
+
+            <tr>
+                <td>PHONE</td>
+                <td><input type="number" name="phoneno"</td>
+            </tr>
+
+            <tr>
+                <td>ADDRESS</td>
+                <td><input type="text" name="address"</td>
+            </tr>
+
+            <tr>
+                <td>GENDER</td>
+            <td><input type="radio" name="gender" value="male"> male
+                <input type="radio" name="gender" value="female"> female
+                <input type="radio" name="gender" value="others"> others
+                </td>
+            </tr>
+
+            <tr>
+                <td>DOB</td>
+                <td><input type="date" name="dob"</td>
+            </tr>
+
+
+            <tr>
+                <td>HEIGHT</td>
+                <td><input type="number" name="height"</td>
+            </tr>
+
+            <tr>
+                <td>WEIGHT</td>
+                <td><input type="number" name="weight"></td>
+            </tr>
+
+            
+            <tr>
+                <td>PASSWORD</td>
+                <td><input type="password" name="pass"</td>
+            </tr>
+
+            <tr>
+                <td>CONFIRM  PASSWORD</td>
+                <td><input type="password" name="pass"</td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td><input type="SUBMIT" name="btn" value="SIGNUP"</td>
+            </tr>
+
+        </table> 
+        </form> {% endcomment %}
+
+
+{%endblock%}

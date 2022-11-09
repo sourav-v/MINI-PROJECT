@@ -1,0 +1,58 @@
+
+        {% extends 'temp/payment.html' %}
+        {% block base %}
+        {% comment %} <h2 align="center">ADD FEEDBACK</h2>  {% endcomment %}
+        <form method="post"> 
+             {% csrf_token %}
+
+    <style>
+
+       body {
+        background-color: #8ebf42;
+      }
+      form {
+        width: 500px;
+        margin: auto;
+        margin-top: 70px;
+      }
+      input {
+        padding: 8px 10px;
+        border: 0;
+        font-size: 16px;
+      }
+      .feedback {
+        width: 75%;
+      }
+      .submit {
+        width: 70px;
+        background-color: #1c87c9;
+        color: #ffffff;
+      } 
+    </style>
+  </head>
+  <body>
+  <h2>Add Feedback</h2>
+    <form action="/form/submit" method="GET">
+      <input type="text" name="name" class="feedback" placeholder="Feedback here!">
+      <input type="submit" name="submit" class="submit" value="submit">
+    </form>
+  </body>
+
+
+        {% comment %} <table align="center">
+            <tr>
+            <td>FEEDBACK</td>
+            <td><input type ="text" name="name"</td>
+            </tr>
+             
+            <tr>
+                <td></td>
+                <td><input type="SUBMIT" name="btn" value="SUBMIT"></td>
+            </tr>
+
+        </table>
+        </form> {% endcomment %}
+
+
+{% endblock %}
+  

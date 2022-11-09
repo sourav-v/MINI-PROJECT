@@ -1,0 +1,57 @@
+
+        {% extends 'temp/package.html' %}
+        {% block base %}
+        {% comment %} <h2 align="center">REPLY</h2> {% endcomment %}
+        <form method="post">
+            {% csrf_token %}
+
+
+            <style>
+
+                body {
+                 background-color: #8ebf42;
+               }
+               form {
+                 width: 500px;
+                 margin: auto;
+                 margin-top: 60px;
+               }
+               input {
+                 padding: 8px 10px;
+                 border: 0;
+                 font-size: 16px;
+               }
+               .reply {
+                 width: 75%;
+               }
+               .submit {
+                 width: 70px;
+                 background-color: #1c87c9;
+                 color: #ffffff;
+               } 
+             </style>
+           </head>
+           <body>
+           <h2>Add Reply</h2>
+             <form action="/form/submit" method="GET">
+               <input type="text" name="name" class="reply" placeholder="reply here!">
+               <input type="submit" name="submit" class="submit" value="submit">
+             </form>
+           </body>
+         
+
+            {% comment %} <table align="center">
+                <tr>
+                    <td>REPLY</td>
+                    <td><input type ="text" name="name"</td>
+                </tr>
+                
+                <tr>
+                    <td></td>
+                    <td><input type="SUBMIT" name="btn" value="REPLY"></td>
+                </tr>
+            </table>
+        </form>  {% endcomment %}
+
+        {% endblock %}
+   

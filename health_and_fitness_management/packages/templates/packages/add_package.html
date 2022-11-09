@@ -1,0 +1,129 @@
+
+
+        {% extends 'temp/package.html' %}
+        {% block base %}
+        {% comment %} <h2 align="center">ADD PACKAGE</h2> {% endcomment %}
+        <form method="post">
+            {% csrf_token %}
+        {% comment %} <table align="center"> {% endcomment %}
+
+
+          <style>
+            body {
+                width: 1500px;
+                margin:  auto;
+                padding: 0px;
+              }
+
+            form{
+                width: 500px;
+                margin: auto;
+                margin-top: 60px;
+            }
+              
+              div.elem-group {
+                margin: 0px 0;
+              }
+              
+              div.elem-group.inlined {
+                width: 20%;
+                display: inline-block;
+                float: left;
+                margin-left: 0%;
+              }
+              
+              label {
+                display: block;
+                font-family: 'Nanum Gothic';
+                padding-bottom: 5px;
+                font-size: 1.25em;
+              }
+              
+              input, select, textarea {
+                border-radius: 3px;
+                border: 2px solid #777;
+                box-sizing: border-box;
+                font-size: 1.25em;
+                font-family: 'Nanum Gothic';
+                width: 100%;
+                padding: 10px;
+              }
+              
+              div.elem-group.inlined input {
+                width: 50%;
+                display: inline-block;
+              }
+              
+          
+             hr {
+                border: 1px dotted #ccc;
+              }
+              
+              button {
+                height: 30px;
+                background: orange;
+                border: none;
+                color: white;
+                font-size: 1.25em;
+                font-family: 'Nanum Gothic';
+                border-radius: 4px;
+                cursor: pointer;
+              }
+              
+              button:hover {
+                border: 2px solid black;
+              }
+            </style>
+          <h2 align="center"> ADD PACKAGES</h2>
+            <form  method="post">
+                <div class="elem-group">
+                  <label for="name">Package Name</label>
+                  <input type="text"  name="pname" placeholder="enter a package name"  required="">
+                </div>
+                <div class="elem-group">
+                  <label for="duration">Package Duration</label>
+                  <input type="date"  name="date"  required="">
+
+                </div>
+                <div class="elem-group">
+                  <label for="amount">Amount</label>
+                  <input type="NUMBER"  name="num" placeholder="enter a amount"  required="">
+                </div>
+              
+                <button type="submit">ADD</button>
+              </form>
+            </style>  
+        </body>
+
+
+
+            {% comment %} <tr>
+            <td>PACKAGE NAME</td>
+            <td><input type ="text" name="pname"</td>
+            </tr>
+
+            <tr>
+            <td>PACKAGE DURATION</td>
+            <td><input type="date" name="date"</td>
+            </tr>
+
+            <td>AMOUNT</td>
+            <td><input type="NUMBER" name="num"</td>
+           </tr>
+            
+            <tr>
+                <td></td>
+                <td><input type="SUBMIT" name="btn" value="ADD"></td>
+            </tr>
+
+        </table> 
+        </form> {% endcomment %}
+        {% if msg != "" %}
+      <script>
+        alert("Package added")
+      </script>
+      {% endif %}
+
+        {% endblock %}
+
+    

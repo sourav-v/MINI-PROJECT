@@ -1,0 +1,139 @@
+
+      {% extends 'temp/package.html' %}
+      {% block base %}
+
+        {% comment %} <h2 align="center">TRAINING PLAN</h2> {% endcomment %}
+        <form method="post">
+            {% csrf_token %}
+
+            <style>
+            body {
+                width: 1500px;
+                margin:  auto;
+                padding: 0px;
+              }
+
+            form{
+                width: 500px;
+                margin: auto;
+                margin-top: 60px;
+            }
+              
+              div.elem-group {
+                margin: 0px 0;
+              }
+              
+              div.elem-group.inlined {
+                width: 20%;
+                display: inline-block;
+                float: left;
+                margin-left: 0%;
+              }
+              
+              label {
+                display: block;
+                font-family: 'Nanum Gothic';
+                padding-bottom: 5px;
+                font-size: 1.25em;
+              }
+              
+              input, select, textarea {
+                border-radius: 3px;
+                border: 2px solid #777;
+                box-sizing: border-box;
+                font-size: 1.25em;
+                font-family: 'Nanum Gothic';
+                width: 100%;
+                padding: 10px;
+              }
+              
+              div.elem-group.inlined input {
+                width: 50%;
+                display: inline-block;
+              }
+              
+              textarea {
+                height: 200px;
+              }
+
+
+             hr {
+                border: 1px dotted #ccc;
+              }
+              
+              button {
+                height: 30px;
+                background: orange;
+                border: none;
+                color: white;
+                font-size: 1.25em;
+                font-family: 'Nanum Gothic';
+                border-radius: 4px;
+                cursor: pointer;
+              }
+              
+              button:hover {
+                border: 2px solid black;
+              }
+            </style>
+          <h2 align="center"> TRAINING PLANS</h2>
+            <form  method="post">
+                <div class="elem-group">
+                  <label for="name">MEAL</label>
+                  <input type="text"  name="pname" placeholder="enter a meal"  required="">
+                </div>
+                <div class="elem-group">
+                  <label for="email">ADD FOODCHART</label>
+                  <input type="text"  name="plans" placeholder="enter a Foodchart" required="">
+                </div>
+                <div class="elem-group">
+                  <label for="phone">TIME</label>
+                  <input type="time"  name="time"  required="">
+                </div>
+                
+    
+                <div class="elem-group">
+                  <label for="message">DESCRIPTION</label>
+                  <textarea type="text" name="excersise" placeholder="enter a excersise patterns" required></textarea>
+                </div>
+                <button type="submit">ADD</button>
+              </form>
+            </style>  
+        </body>
+
+        {% comment %} <table align="center">
+            <tr>
+            <td>MEAL</td>
+            <td><input type ="text" name="pname"</td>
+            </tr>
+
+            <tr>
+            <td>ADD FOODCHART</td>
+            <td><input type="TEXT" name="plans"</td>
+            </tr>
+
+
+            <tr>
+            <td>TIME</td>
+            <td><input type ="time" name="time"</td>
+
+    
+            <tr>
+            <td>EXERCISE PATTERN DESCRIPTION</td>
+            <td><input type="text" name="excersise"></td>
+            </tr>
+
+
+
+            </tr>
+            
+            <tr>
+                <td></td>
+                <td><input type="submit" name="btn" value="SUBMIT"></td>
+            </tr>
+
+        </table> 
+        </form> {% endcomment %}
+
+
+{%endblock%}

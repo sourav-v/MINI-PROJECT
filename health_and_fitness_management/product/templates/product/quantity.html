@@ -1,0 +1,82 @@
+        
+      {% extends 'temp/package.html' %}
+      {% block base %}
+        {% comment %} <h2 align="center">QUANTITY</h2> {% endcomment %}
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+        {% comment %} <table align="center"> {% endcomment %}
+            
+
+            {% comment %} <tr>
+            <td>QUANTITY</td>
+            <td><input type="text" name="quantity"></td>
+            </tr> {% endcomment %}
+
+            <style>
+
+                body {
+                 background-color: #8ebf42;
+               }
+               form {
+                 width: 500px;
+                 margin: auto;
+                 margin-top: 70px;
+               }
+               input {
+                 padding: 8px 10px;
+                 border: 0;
+                 font-size: 16px;
+               }
+               .feedback {
+                 width: 75%;
+               }
+               .submit {
+                 width: 70px;
+                 background-color: #1c87c9;
+                 color: #ffffff;
+               } 
+             </style>
+           </head>
+           <body>
+           <h2>Quantity</h2>
+             <form action="/form/submit" method="GET">
+               <input type="text" name="quantity" class="quantity" placeholder="Quantity here!">
+               <input type="submit" name="btn" class="submit" value="submit">
+             </form>
+           </body>
+         
+
+            {% comment %} <tr>
+                <td>IMAGE</tD>
+                   <td><input type="file" name="img"</td>
+               </tr>
+            
+            <tr>
+                <td>PRICE</td>
+                <td><input type="TEXT" name="price"</td>
+                </tr>
+
+            <tr>
+                <td>EXPIRY DATE</td>
+                <td><input type="date" name="date"</td>
+                </tr>
+           
+             <tr>
+                <td>STOCK</td>
+                <td><input type="number" name="stock"</td>
+            </tr>
+            
+            <tr>
+             <td>DESCRIPTION</tD>
+                <td><input type="text" name="descrip"</td>
+            </tr> {% endcomment %}
+            
+            {% comment %} <tr>
+                <td></td>
+                <td><input type="submit" name="btn" value="SUBMIT"></td>
+            </tr>
+
+        </table> 
+        </form> {% endcomment %}
+        {%endblock%}
+

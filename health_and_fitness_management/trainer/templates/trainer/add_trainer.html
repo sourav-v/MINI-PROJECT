@@ -1,0 +1,174 @@
+
+      {% extends 'temp/package.html' %}
+      {% block base %}
+        {% comment %} <h2 align="center">ADD TRAINER</h2> {% endcomment %}
+        <form method="post">
+        {% comment %} <table align="center"> {% endcomment %}
+            {% csrf_token %}
+
+
+
+
+            <style>
+                body {
+                    width: 1500px;
+                    margin:  auto;
+                    padding: 0px;
+                  }
+    
+                form{
+                    width: 500px;
+                    margin: auto;
+                    margin-top: 60px;
+                }
+                  
+                  div.elem-group {
+                    margin: 0px 0;
+                  }
+                  
+                  div.elem-group.inlined {
+                    width: 20%;
+                    display: inline-block;
+                    float: left;
+                    margin-left: 0%;
+                  }
+                  
+                  label {
+                    display: block;
+                    font-family: 'Nanum Gothic';
+                    padding-bottom: 5px;
+                    font-size: 1.25em;
+                  }
+                  
+                  input, select, textarea {
+                    border-radius: 3px;
+                    border: 2px solid #777;
+                    box-sizing: border-box;
+                    font-size: 1.25em;
+                    font-family: 'Nanum Gothic';
+                    width: 100%;
+                    padding: 10px;
+                  }
+                  
+                  div.elem-group.inlined input {
+                    width: 50%;
+                    display: inline-block;
+                  }
+                  
+    
+                 hr {
+                    border: 1px dotted #ccc;
+                  }
+                  
+                  button {
+                    height: 30px;
+                    background: orange;
+                    border: none;
+                    color: white;
+                    font-size: 1.25em;
+                    font-family: 'Nanum Gothic';
+                    border-radius: 4px;
+                    cursor: pointer;
+                  }
+                  
+                  button:hover {
+                    border: 2px solid black;
+                  }
+                </style>
+              <h2 align="center">ADD TRAINER DETAILS </h2>
+                <form  method="post">
+                    <div class="elem-group">
+                      <label for="name">Trainer Name</label>
+                      <input type="text"  name="tname" placeholder="enter a name"  required="">
+                    </div>
+                    <div class="elem-group">
+                      <label for="email">Email Id</label>
+                      <input type="text"  name="email" placeholder="enter a email" required="">
+                    </div>
+
+                    <div class="elem=group">
+                      <label for="phone">Phone</label>
+                      <input type="number"  name="phone" placeholder="enter a phone number"  required="">
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="gender">Gender</label>
+                        <select name="gender" class="form-control form-control-sm">
+                            <option value="">i am...</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="female">others</option>
+
+                        </select>
+                    </div>
+    
+        
+                    <div class="elem-group">
+                      <label for="dob">Dob</label>
+                      <input type="date" name="dob" placeholder="enter a date of birth" required>
+                    </div>
+
+                    <div class="elem-group">
+                        <label for="experience">Experience</label>
+                        <input type="text" name="exp" placeholder="enter a trainer experience" required>
+                      </div>
+
+                    <button type="submit">ADD</button>
+                  </form>
+                </style>  
+            </body>
+
+
+
+
+
+
+
+            {% comment %} <tr>
+            <td>TRAINER NAME</td>
+            <td><input type ="text" name="tname"</td>
+            </tr>
+
+            <tr>
+            <td>EMAIL ID</td>
+            <td><input type="text" name="email"</td>
+            </tr>
+
+            <tr>
+                <td>PHONE</td>
+                <td><input type="number" name="phone"</td>
+            </tr>           
+
+            <tr>
+            <td>GENDER</td>
+            <td><input type="radio" name="gender" value="male"> male
+                <input type="radio" name="gender" value="female"> female
+                <input type="radio" name="gender" value="others"> others
+                </td>
+            </tr> 
+
+            <tr>
+                <td>DOB</td>
+                <td><input type="date" name="dob"</td>
+            </tr>
+
+
+            <tr>
+                <td>EXPERIENCE</td>
+                <td><input type="text" name="exp"</td>
+            </tr>
+
+           
+
+            <tr>
+                <td></td>
+                <td><input type="submit" name="btn" value="ADD"</td>
+            </tr>
+
+        </table> 
+        <form>  {% endcomment %}
+
+
+
+    {%endblock%}

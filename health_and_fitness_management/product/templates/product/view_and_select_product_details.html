@@ -1,0 +1,40 @@
+        
+      {% extends 'temp/payment.html' %}
+      {% block base %}
+        <h1><center>VIEW PRODUCT DETAILS<center></h1>
+            <center>
+            <form method="POST">
+                {% csrf_token %}
+                <tr>
+                    <td><input type="text" name="search"><input type="submit"></td>
+                </tr>
+            </form>
+        </center>
+        <table align="center" border="1">
+            <tr>
+                <td>product_name</td>
+                <td>price</td>
+                <td>expiry date</td>
+                <td>stock</td>
+                <td>description</td>
+                <td>image</td>
+               
+                
+            </tr>
+            {% for i in ok %}
+            <tr>
+                <td>{{ i.product_name }}</td>
+                <td>{{ i.price }}</td>
+                <td>{{ i.expdate }}</td>
+                <td>{{ i.stock }}</td>
+                <td>{{ i.description }}</td>
+                <td><img src="/static/{{ i.image }}" width="100px" height="100px"></td>
+                {% comment %} <td><input type="text" name="quantity" placeholder="quantity"></td>
+                <td><input type="submit" value="submit"></td> {% endcomment %}
+                <td><a href="/product/quantity/{{ i.product_id }}">order</a></td>
+                {% comment %} <td><a href="/payment/apayment/{{ i.product_id }}">order</a></td> {% endcomment %}
+            </tr>
+            {% endfor %} 
+
+        </table>
+        {%endblock%}
